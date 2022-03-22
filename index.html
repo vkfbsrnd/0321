@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device, initial-scale=1.0">
+    <title>document</title>
+    <style>
+        body {background-color: lightyellow;}
+        .bgcolor--blue {background-color: lightblue;}
+        .bgcolor--red {background-color: lightcoral;}
+    </style>
+</head>
+<body>
+    <button class="btn_bg_red">빨강</button>
+    <button class="btn_bg_blue">파랑</button>
+    <button class="btn_bg_yellow">노랑</button>
+    <script>
+        const btnBgRed = document.querySelector('.btn_bg_red');
+        btnBgRed.addEventListener('click', function () {
+            document.body.classList.toggle('bgcolor--red');
+            document.body.classList.remove('bgcolor--blue');
+
+        })
+
+
+        const btnBgBlue = document.querySelector('.btn_bg_blue');
+        btnBgBlue.addEventListener('click', function () {
+            document.body.classList.toggle('bgcolor--blue');
+            document.body.classList.remove('bgcolor--red');
+        })
+
+
+        const btnBgYellow = document.querySelector('.btn_bg_yellow');
+        btnBgYellow.addEventListener('click', function () {
+            document.body.classList.remove('bgcolor--red','bgcolor--blue');
+            
+        })
+
+
+    </script>
+</body>
+</html>
